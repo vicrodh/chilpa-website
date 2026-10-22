@@ -3,9 +3,9 @@ export default {
   name: 'Español',
   ogLocale: 'es_MX',
   meta: {
-    title: 'Chilpa · Reproductor para tu colección local, con salida bit-perfect',
+    title: 'Chilpa · Un reproductor para gobernarlos a todos',
     description:
-      'Reproductor de música para tu colección local, con salida bit-perfect. Motor de audio, biblioteca y plugins en Rust; interfaz en Qt 6 / QML. Disponible para Linux y macOS (Apple Silicon).',
+      'Reproductor de música y gestor de biblioteca de código abierto para Linux y macOS. Lo local primero. Bit-perfect. Hecho para escalar.',
   },
   nav: {
     label: 'Principal',
@@ -19,8 +19,8 @@ export default {
     language: 'Idioma',
   },
   hero: {
-    title: 'Reproductor para tu colección local, con salida bit-perfect.',
-    lead: 'Motor de audio, biblioteca y plugins en Rust; interfaz en Qt 6 / QML. Disponible para Linux y macOS (Apple Silicon).',
+    title: 'Un reproductor para gobernarlos a todos.',
+    lead: 'Reproductor de música y gestor de biblioteca de código abierto. Lo local primero. Bit-perfect. Hecho para escalar.',
     fromCreator: 'Del creador de {qbz}',
     downloadFor: 'Descargar para {platform}',
     allPlatforms: 'Todas las plataformas',

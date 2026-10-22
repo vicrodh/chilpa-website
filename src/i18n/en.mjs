@@ -3,9 +3,9 @@ export default {
   name: 'English',
   ogLocale: 'en_US',
   meta: {
-    title: 'Chilpa · A player for your local collection, with bit-perfect output',
+    title: 'Chilpa · One Player to Rule Them All',
     description:
-      'A music player for your local collection, with bit-perfect output. Audio engine, library and plugins in Rust; interface in Qt 6 / QML. Available for Linux and macOS (Apple Silicon).',
+      'Open-source music player & library manager for Linux and macOS. Local-first. Bit-perfect. Built to scale.',
   },
   nav: {
     label: 'Main',
@@ -19,8 +19,8 @@ export default {
     language: 'Language',
   },
   hero: {
-    title: 'A player for your local collection, with bit-perfect output.',
-    lead: 'Audio engine, library and plugins in Rust; interface in Qt 6 / QML. Available for Linux and macOS (Apple Silicon).',
+    title: 'One Player to Rule Them All.',
+    lead: 'Open-source music player & library manager. Local-first. Bit-perfect. Built to scale.',
     fromCreator: 'From the creator of {qbz}',
     downloadFor: 'Download for {platform}',
     allPlatforms: 'All platforms',

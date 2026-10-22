@@ -181,9 +181,11 @@ img {
   margin-right: auto;
 }
 
+/* The lockup's wordmark renders at the same size as at 30px before the wasp
+   grew 1.5x inside the SVG (viewBox height 260 -> 365). */
 .lockup {
   width: auto;
-  height: 30px;
+  height: 42px;
 }
 
 .header-nav {
@@ -360,6 +362,7 @@ img {
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .lead {
@@ -1025,7 +1028,7 @@ img {
 }
 
 .chooser .lockup {
-  height: 44px;
+  height: 62px;
 }
 
 .chooser-links {

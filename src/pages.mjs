@@ -50,7 +50,7 @@ ${lang ? html`<script src="${href(assets.js)}" defer></script>` : ''}
 }
 
 function lockup() {
-  return html`<img class="lockup lockup-light" src="${href('brand/chilpa-lockup-light.svg')}" alt="" width="127" height="30"><img class="lockup lockup-dark" src="${href('brand/chilpa-lockup-dark.svg')}" alt="" width="127" height="30">`
+  return html`<img class="lockup lockup-light" src="${href('brand/chilpa-lockup-light.svg')}" alt="" width="139" height="42"><img class="lockup lockup-dark" src="${href('brand/chilpa-lockup-dark.svg')}" alt="" width="138" height="42">`
 }
 
 function header(t) {
