@@ -779,7 +779,7 @@ img {
 
 .store {
   display: grid;
-  grid-template-columns: auto 7rem minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(7rem, max-content) minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
@@ -788,6 +788,10 @@ img {
 }
 
 .store-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
   font-weight: 600;
 }
 
@@ -1064,6 +1068,11 @@ img {
     border-bottom: 1px solid var(--line);
     background: var(--bg);
     overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .toc::-webkit-scrollbar {
+    display: none;
   }
 
   .toc-title {
@@ -1128,6 +1137,15 @@ img {
   .package-links {
     grid-column: 1 / -1;
     justify-content: flex-start;
+  }
+
+  /* The architecture is enough on a phone; the button keeps its full label for screen readers. */
+  .package-links .btn > span:not(.arch) {
+    display: none;
+  }
+
+  .package-links .arch {
+    opacity: 1;
   }
 
   .store {
