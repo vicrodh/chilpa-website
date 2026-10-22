@@ -104,6 +104,7 @@ export default {
     plugins: 'Plugins',
     qbz: 'QBZ',
   },
+  notFound: 'This page does not exist.',
   captures: {
     pending: 'Screenshot pending · {name}',
     'main-window': {

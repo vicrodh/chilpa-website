@@ -382,7 +382,7 @@ ${head({ title: 'Chilpa · 404', description: locales.en.meta.description, asset
 <p class="chooser-brand"><a href="${href()}" aria-label="Chilpa">${lockup()}</a></p>
 <h1>404</h1>
 <ul class="chooser-links">
-${html`<li lang="es"><a class="btn" href="${href('es/')}" hreflang="es">Español</a><span>Esta página no existe.</span></li><li lang="en"><a class="btn" href="${href('en/')}" hreflang="en">English</a><span>This page does not exist.</span></li>`}
+${html`${[locales.es, locales.en].map((t) => html`<li lang="${t.lang}"><a class="btn" href="${href(`${t.lang}/`)}" hreflang="${t.lang}">${t.name}</a><span>${t.notFound}</span></li>`)}`}
 </ul>
 </main>
 </body>

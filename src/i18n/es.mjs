@@ -104,6 +104,7 @@ export default {
     plugins: 'Plugins',
     qbz: 'QBZ',
   },
+  notFound: 'Esta página no existe.',
   captures: {
     pending: 'Captura pendiente · {name}',
     'main-window': {
