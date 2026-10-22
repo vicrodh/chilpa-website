@@ -106,14 +106,17 @@ jobs:
 
 ### First setup
 
-1. In the repository settings, Pages › Source: "GitHub Actions".
-2. Pages › Custom domain: `chilpa.app`, then "Enforce HTTPS" once the
-   certificate is issued. Verify the domain in the account's Pages settings
-   first, so no other repository can claim it.
-3. DNS for the apex domain, without the Cloudflare proxy (DNS only):
-   `A` records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
-   `185.199.111.153`, and `AAAA` records `2606:50c0:8000::153`,
-   `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.
+1. In the repository settings, Pages › Source: "GitHub Actions", and Custom
+   domain: `chilpa.app`.
+2. The `chilpa.app` zone is on Cloudflare. One proxied `CNAME` at the apex
+   (`@`) to `vicrodh.github.io`, which Cloudflare flattens, and a proxied
+   `CNAME` `www` to `chilpa.app`; GitHub redirects `www` to the apex.
+3. Cloudflare SSL/TLS mode "Full" and "Always Use HTTPS". Behind the proxy the
+   visitor gets Cloudflare's certificate and GitHub issues none, so "Enforce
+   HTTPS" in the Pages settings stays off; "Full (strict)" would fail for the
+   same reason.
+4. Verify `chilpa.app` in the account's Pages settings (a `TXT` record), so no
+   other repository can claim it.
 
 The output is plain static files with absolute paths under `SITE_URL`, so any
 other static host works with the same `dist/`.
