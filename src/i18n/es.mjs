@@ -109,25 +109,31 @@ export default {
     pending: 'Captura pendiente · {name}',
     'main-window': {
       name: 'Ventana principal',
-      alt: 'Ventana principal de Chilpa: biblioteca en vista de álbumes, barra lateral y reproductor con un álbum sonando',
+      alt: 'Ventana principal de Chilpa: inicio con los discos agregados y escuchados hace poco, la barra lateral y el reproductor con un disco sonando',
     },
     'output-indicator': {
       name: 'Indicador de salida',
-      alt: 'Indicador de salida con el formato de origen, el formato de salida y el estado sin procesamiento',
+      alt: 'Indicador de salida del reproductor: un archivo DSD256 local sale nativo a un DAC Fosi Audio ZH3 por ALSA directo, marcado bit-perfect',
     },
-    'hifi-wizard': { name: 'HiFi Wizard', alt: 'HiFi Wizard en el paso de detección del DAC' },
+    'hifi-wizard': {
+      name: 'HiFi Wizard',
+      alt: 'HiFi Wizard en el paso Review & Apply, con los comandos de PipeWire para el DAC detectado, que Chilpa nunca escribe por su cuenta',
+    },
     'artist-page': {
       name: 'Página de artista',
-      alt: 'Página de artista con la discografía y la red de relaciones de MusicBrainz',
+      alt: 'Página de artista con sus pistas populares, el último lanzamiento y el panel Network con sellos y artistas similares',
     },
     'library-refine': {
       name: 'Biblioteca con Refine abierto',
-      alt: 'Biblioteca con Refine abierto: una consulta de siete condiciones con una exclusión y la consola visible',
+      alt: 'Biblioteca con Refine abierto: una condición sobre un campo de la biblioteca y los discos que la cumplen',
     },
-    immersive: { name: 'Vista inmersiva', alt: 'Vista inmersiva con la letra sincronizada resaltando la palabra actual' },
+    immersive: {
+      name: 'Vista inmersiva',
+      alt: 'Vista inmersiva: la línea actual de la letra junto a la portada, sobre un fondo tomado de ella',
+    },
     'settings-privacy': {
-      name: 'Ajustes › Privacidad',
-      alt: 'Ajustes de privacidad con el interruptor de cada integración y el modo offline',
+      name: 'Ajustes › Integraciones',
+      alt: 'Ajustes con el modo offline encendido: el proxy de Chilpa y el scrobbling quedan deshabilitados',
     },
   },
 }

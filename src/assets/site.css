@@ -81,6 +81,11 @@
   display: none;
 }
 
+/* .capture sets display: block, which outranks the plain .theme-dark above. */
+:root[data-theme='light'] .theme-dark {
+  display: none;
+}
+
 :root[data-theme='dark'] .lockup-light,
 :root[data-theme='dark'] .theme-light,
 :root[data-theme='dark'] .when-light {

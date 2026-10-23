@@ -63,15 +63,19 @@ extension `webp`, `png`, `jpg` or `avif`. A file for one theme stands in for
 the other. Until a capture exists the page shows a striped placeholder and the
 build lists it as pending.
 
+The files are taken from full-window captures at 1440×900. The two captures
+shown side by side, `output-indicator` and `hifi-wizard`, are cropped to the same
+4:3 ratio so their row lines up.
+
 | id | What it shows |
 | --- | --- |
-| `main-window` | Library in album view, sidebar and the player with an album playing; 1440×900, one per language and theme: `main-window-es-light`, `main-window-es-dark`, `main-window-en-light`, `main-window-en-dark` |
-| `output-indicator` | Output popover with source format, output format and the "no processing" state |
-| `hifi-wizard` | HiFi Wizard on Linux, DAC detection step |
-| `artist-page` | Artist page with discography and the MusicBrainz relationship network |
-| `library-refine` | Library with Refine open: a seven-condition query with one exclusion and the console visible; one per theme: `library-refine-light`, `library-refine-dark` |
-| `immersive` | Immersive view, synced lyrics highlighting the current word, cover background |
-| `settings-privacy` | Settings › Privacy with each integration's switch and offline mode |
+| `main-window` | Home with the sidebar and the player with an album playing; one per theme, and optionally per language (`main-window-es-dark`) |
+| `output-indicator` | The player's output popover: source, format, output, device and route, marked bit-perfect |
+| `hifi-wizard` | HiFi Wizard on Linux, the Review & Apply step with the detected DAC |
+| `artist-page` | Artist page with its popular tracks and the Network panel |
+| `library-refine` | Library with Refine open; one per theme: `library-refine-light`, `library-refine-dark` |
+| `immersive` | Immersive view: synced lyrics beside the cover, over a background taken from it |
+| `settings-privacy` | Settings › Integrations with offline mode on and the integrations it turns off |
 
 ## Deploy
 

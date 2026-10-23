@@ -109,25 +109,31 @@ export default {
     pending: 'Screenshot pending · {name}',
     'main-window': {
       name: 'Main window',
-      alt: "Chilpa's main window: the library in album view, the sidebar and the player with an album playing",
+      alt: "Chilpa's main window: Home with recently added and recently played albums, the sidebar and the player with an album playing",
     },
     'output-indicator': {
       name: 'Output indicator',
-      alt: 'Output indicator with the source format, the output format and the no-processing state',
+      alt: "The player's output indicator: a local DSD256 file going natively to a Fosi Audio ZH3 DAC over direct ALSA, marked bit-perfect",
     },
-    'hifi-wizard': { name: 'HiFi Wizard', alt: 'HiFi Wizard at the DAC detection step' },
+    'hifi-wizard': {
+      name: 'HiFi Wizard',
+      alt: 'HiFi Wizard at the Review & Apply step, with the PipeWire commands for the detected DAC, which Chilpa never writes on its own',
+    },
     'artist-page': {
       name: 'Artist page',
-      alt: 'Artist page with the discography and the MusicBrainz relationship network',
+      alt: 'Artist page with popular tracks, the latest release and the Network panel with labels and similar artists',
     },
     'library-refine': {
       name: 'Library with Refine open',
-      alt: 'Library with Refine open: a seven-condition query with one exclusion and the console visible',
+      alt: 'Library with Refine open: a condition on a library field and the albums that meet it',
     },
-    immersive: { name: 'Immersive view', alt: 'Immersive view with synced lyrics highlighting the current word' },
+    immersive: {
+      name: 'Immersive view',
+      alt: 'Immersive view: the current lyric line beside the cover, over a background taken from it',
+    },
     'settings-privacy': {
-      name: 'Settings › Privacy',
-      alt: 'Privacy settings with the switch for each integration and offline mode',
+      name: 'Settings › Integrations',
+      alt: 'Settings with offline mode on: the Chilpa proxy and scrobbling are disabled',
     },
   },
 }
