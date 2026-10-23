@@ -6,7 +6,8 @@
   src: url('../fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
 }
 
-/* Color tokens from the wireframes (.w and .w[data-theme=dark]). */
+/* Color tokens from the wireframes (.w and .w[data-theme=dark]). Every page
+   is served with data-theme="dark"; light applies only when the visitor picks it. */
 :root {
   --bg: #fff;
   --fg: #1a0c0e;
@@ -42,36 +43,6 @@
   --ph2: #251617;
   --phb: rgba(253, 244, 231, 0.3);
   color-scheme: dark;
-}
-
-/* Without scripts the page follows the system theme. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --bg: #140a0b;
-    --fg: #fdf4e7;
-    --mut: #cbbab3;
-    --mut2: #a8978f;
-    --line: rgba(253, 244, 231, 0.12);
-    --line2: rgba(253, 244, 231, 0.22);
-    --acc: #ec7c82;
-    --alt: #1d1011;
-    --inv: #fdf4e7;
-    --invfg: #1a0c0e;
-    --ph1: #1d1011;
-    --ph2: #251617;
-    --phb: rgba(253, 244, 231, 0.3);
-    color-scheme: dark;
-  }
-
-  :root:not([data-theme]) .lockup-light,
-  :root:not([data-theme]) .theme-light {
-    display: none;
-  }
-
-  :root:not([data-theme]) .lockup-dark,
-  :root:not([data-theme]) .theme-dark {
-    display: block;
-  }
 }
 
 .lockup-dark,

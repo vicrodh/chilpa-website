@@ -17,12 +17,14 @@
     },
   }
 
-  // Theme: the inline script in <head> already applied the stored or system
-  // theme; this keeps the toggle's label in step and follows system changes
-  // until the visitor picks one.
+  // Theme: dark unless the visitor picked light, which the inline script in
+  // <head> already applied; this keeps the toggle's label and the browser's
+  // theme color in step.
   const toggle = document.querySelector('[data-theme-toggle]')
+  const themeColor = document.querySelector('meta[name="theme-color"]')
   const applyTheme = (theme) => {
     root.setAttribute('data-theme', theme)
+    themeColor?.setAttribute('content', theme === 'dark' ? '#140A0B' : '#ffffff')
     if (!toggle) return
     const label = theme === 'dark' ? toggle.dataset.labelLight : toggle.dataset.labelDark
     toggle.setAttribute('aria-label', label)
@@ -33,9 +35,6 @@
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
     storage.set('chilpa-theme', next)
     applyTheme(next)
-  })
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-    if (!storage.get('chilpa-theme')) applyTheme(event.matches ? 'dark' : 'light')
   })
 
   // Language: remember the choice and keep the section in view.

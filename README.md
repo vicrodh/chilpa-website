@@ -1,8 +1,9 @@
 # chilpa-website
 
 The website of [Chilpa](https://github.com/vicrodh/chilpa): one page in Spanish
-(`/es/`) and English (`/en/`), light and dark, with downloads and release notes
-taken from the GitHub releases of `vicrodh/chilpa`.
+(`/es/`) and English (`/en/`), dark by default with a light theme the visitor can
+switch to, with downloads and release notes taken from the GitHub releases of
+`vicrodh/chilpa`.
 
 It is a static site. A Node script renders the HTML at build time; the visitor's
 browser loads only files from the site itself. There is no analytics, no

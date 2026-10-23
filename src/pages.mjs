@@ -6,9 +6,10 @@ import { icon } from './icons.mjs'
 export const href = (path = '') => `${basePath}${path}`
 export const absolute = (path = '') => `${site.url}/${path}`
 
-// Runs before the first paint so the stored or system theme applies at once.
+// The pages are dark by default; this runs before the first paint so a
+// stored choice of the light theme applies at once.
 export const themeScript =
-  "(function(){var d=document.documentElement,t;d.classList.replace('no-js','js');try{t=localStorage.getItem('chilpa-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}d.setAttribute('data-theme',t)})();"
+  "(function(){var d=document.documentElement,t;d.classList.replace('no-js','js');try{t=localStorage.getItem('chilpa-theme')}catch(e){}if(t==='light')d.setAttribute('data-theme',t)})();"
 
 // The root page sends the visitor to the stored language, else the browser's.
 export const languageScript = `(function(){var l;try{l=localStorage.getItem('chilpa-lang')}catch(e){}if(l!=='es'&&l!=='en'){var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';l=/^es/i.test(n)?'es':'en'}location.replace(${JSON.stringify(basePath)}+l+'/'+location.hash)})();`
@@ -37,8 +38,7 @@ ${ogLocale ? html`<meta property="og:locale" content="${ogLocale}">` : ''}
 ${ogAlternates.map((locale) => html`<meta property="og:locale:alternate" content="${locale}">`)}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#140A0B" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#140A0B">
 <link rel="icon" href="${href('brand/icon.svg')}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${href('brand/apple-touch-icon.png')}">
 <link rel="preload" href="${href(assets.font)}" as="font" type="font/woff2" crossorigin>
@@ -312,7 +312,7 @@ export function homePage(ctx) {
   const { t, assets, csp } = ctx
   const others = site.languages.filter((code) => code !== t.lang).map((code) => ctx.locales[code].ogLocale)
   return `<!doctype html>
-<html lang="${t.lang}" class="no-js">
+<html lang="${t.lang}" class="no-js" data-theme="dark">
 ${head({
   lang: t.lang,
   title: t.meta.title,
@@ -352,7 +352,7 @@ export function rootPage({ locales, assets, csp }) {
   const es = locales.es
   const en = locales.en
   return `<!doctype html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-theme="dark">
 ${head({
   title: 'Chilpa',
   description: `${en.meta.description} · ${es.meta.description}`,
@@ -375,7 +375,7 @@ ${html`${[es, en].map((t) => html`<li lang="${t.lang}"><a class="btn" href="${hr
 
 export function notFoundPage({ locales, assets, csp }) {
   return `<!doctype html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-theme="dark">
 ${head({ title: 'Chilpa · 404', description: locales.en.meta.description, assets, csp, robots: 'noindex' })}
 <body class="center-page">
 <main class="chooser">
