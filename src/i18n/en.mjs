@@ -34,6 +34,7 @@ export default {
     privacy: 'Privacy',
     platforms: 'Platforms',
     community: 'Community',
+    faq: 'FAQ',
   },
   bitPerfect: {
     title: 'Bit-perfect and HiFi Wizard',
@@ -96,6 +97,41 @@ export default {
     issues: 'Issues',
     source: 'Source',
     successor: 'Chilpa is the spiritual successor to {qbz}.',
+  },
+  faq: {
+    title: 'FAQ',
+    note: 'Disclaimer: this section is full of references to QBZ.',
+    ringQuote: 'Ash Nazg durbatulûk, ash Nazg gimbatul, ash Nazg thrakatulûk agh burzum-ishi krimpatul',
+    items: [
+      {
+        q: 'Is Chilpa a vibe-coded app?',
+        a: "Yes. When I started QBZ it was for myself: I built it because there was no Qobuz client for Linux, and although I admire Strawberry a lot (Chilpa takes several of its features as inspiration), I have a love/hate relationship with it, so I didn't want to use the web player and I didn't want to fight with Strawberry's search either. First I made a small CLI client based on the Python downloaders, then I turned it into an API, then I fell for the Rust hype (for the better) and decided to migrate the project to that language, all by hand, as a POC, as a hobby. When LLMs went mainstream I dusted the project off, and that's when it saw the light: over its 9 months of life it became the reference open-source streaming player. Its core was hand-written code; its evolution was vibe-coded. Chilpa, on the other hand, is 99% vibe-coded: it already had all the logic, the ADRs and, above all, the community's feedback. I have written no more than 200 lines of Chilpa's code, plus several unit tests; being optimistic, that's 1% of the code, and that's rounding up. So yes, Chilpa is a vibe-coded app. It's built responsibly, with good practices, ADRs, SOLID and the workflows I use in my real job, but it's still vibe code. If that's a problem for you, Chilpa is probably not for you.",
+      },
+      {
+        q: 'Why make Chilpa?',
+        a: "I could start the speech like everyone else: \"There was no app like this, so I decided to make my own\". The truth is that the music app market is huge right now; new ones show up every week, some with one feature, some with another. Chilpa exists because when QBZ died, my ADHD was left without its hyperfocus, and it's not nice when a person with ADHD has their hyperfocus taken away abruptly. That's the main reason. The second one, but no less important: QBZ didn't just show that there is a gap to fill, it also gathered a huge amount of community feedback that gave it life and made it relevant. Ignoring that feedback, that know-how and those bug reports would be almost a sin. Companies pay for the feedback QBZ received kindly from every user who used it, and there are companies (cough, cough) that simply decide to ignore their community, the one that pays. In the open-source world we do things differently. That's why Chilpa exists, and if it has half the users QBZ had, that alone will be a success.",
+      },
+      {
+        q: "I've tried Chilpa, you should commercialize it.",
+        a: 'No. Chilpa is and will always be free and open source. Even if there are sponsors or whatever, it will never have a premium tier or premium features. A comment, a donation, a PR and an issue are equally valuable.',
+      },
+      {
+        q: "The page title is pretty pretentious, don't you think?",
+        a: "Ah, yes. I didn't write it with airs of grandeur, but as a reference: {quote}.",
+      },
+      {
+        q: 'Will there be a Windows version?',
+        a: "Yes. It's just that I don't have a permanent Windows computer: I set up a temporary install for QBZ, but I deleted it and haven't made another. It will come, but once the initial version stabilizes a bit more.",
+      },
+      {
+        q: 'What about a headless daemon?',
+        a: "Of course. The idea is for Chilpa not to depend on the streaming services' *-connect protocols. Again: a single option, with usage standards, easy to use.",
+      },
+      {
+        q: 'A mobile version?',
+        a: "Yes. It will go hand in hand with the headless version.",
+      },
+    ],
   },
   footer: {
     source: 'Source',

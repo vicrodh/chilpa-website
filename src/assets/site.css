@@ -520,6 +520,25 @@ img {
   color: var(--fg);
 }
 
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .small {
   font-size: 0.9375rem;
 }

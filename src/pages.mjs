@@ -122,7 +122,7 @@ ${release ? html`<p class="hero-meta"><a href="${release.url}">${release.tag}</a
 </section>`
 }
 
-const sections = ['bit-perfect', 'library', 'lyrics', 'plugins', 'privacy', 'platforms', 'community']
+const sections = ['bit-perfect', 'library', 'lyrics', 'plugins', 'privacy', 'platforms', 'community', 'faq']
 const tocKeys = {
   'bit-perfect': 'bitPerfect',
   library: 'library',
@@ -131,6 +131,7 @@ const tocKeys = {
   privacy: 'privacy',
   platforms: 'platforms',
   community: 'community',
+  faq: 'faq',
 }
 
 function toc(t) {
@@ -292,6 +293,22 @@ function community(ctx) {
   )
 }
 
+function faq(ctx) {
+  const { t } = ctx
+  const quote = html`<i>${t.faq.ringQuote}</i>`
+  return section(
+    'faq',
+    t.faq.title,
+    html`<p class="small muted">${t.faq.note}</p>
+<div class="faq">
+${t.faq.items.map((item) => html`<div class="faq-item">
+<h3>${item.q}</h3>
+<p>${fill(item.a, { quote })}</p>
+</div>`)}
+</div>`,
+  )
+}
+
 function footer(t) {
   const links = [
     [site.links.source, t.footer.source],
@@ -338,6 +355,7 @@ ${plugins(ctx)}
 ${privacy(ctx)}
 ${platformsSection(ctx)}
 ${community(ctx)}
+${faq(ctx)}
 </div>
 </div>
 </div>

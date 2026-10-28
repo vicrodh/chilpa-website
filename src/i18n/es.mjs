@@ -34,6 +34,7 @@ export default {
     privacy: 'Privacidad',
     platforms: 'Plataformas',
     community: 'Comunidad',
+    faq: 'Preguntas frecuentes',
   },
   bitPerfect: {
     title: 'Bit-perfect y HiFi Wizard',
@@ -96,6 +97,41 @@ export default {
     issues: 'Issues',
     source: 'Código',
     successor: 'Chilpa es el sucesor espiritual de {qbz}.',
+  },
+  faq: {
+    title: 'Preguntas frecuentes',
+    note: 'Aviso: esta sección está llena de referencias a QBZ.',
+    ringQuote: 'Ash Nazg durbatulûk, ash Nazg gimbatul, ash Nazg thrakatulûk agh burzum-ishi krimpatul',
+    items: [
+      {
+        q: '¿Chilpa es una aplicación vibe-codeada?',
+        a: 'Sí. Cuando empecé QBZ era para mí: lo hice porque no había un cliente de Qobuz para Linux, y aunque admiro mucho a Strawberry (Chilpa toma varias de sus funciones como inspiración), tengo una relación de amor/odio con él, así que ni quería usar el reproductor web ni quería pelear con el buscador de Strawberry. Primero hice un cliente pequeño de CLI basado en los downloaders de Python, luego lo convertí en una API, después caí en el hype de Rust —para bien— y decidí migrar el proyecto a ese lenguaje, todo a mano, como POC, como hobby. Cuando los LLMs llegaron al mainstream, desempolvé el proyecto y entonces vio la luz: durante sus 9 meses de vida se convirtió en el reproductor de streaming open source de referencia. Su core era código escrito a mano; su evolución fue vibe-codeada. Chilpa, en cambio, está 99% vibe-codeada: ya tenía toda la lógica, los ADR y, sobre todo, el feedback de la comunidad. Solo he escrito no más de 200 líneas de código de Chilpa y varias pruebas unitarias; siendo optimista, es el 1% del código, y eso redondeando hacia arriba. Así que sí, Chilpa es una app vibe-codeada. Está hecha con responsabilidad, con buenas prácticas, ADR, SOLID y los workflows que uso en mi trabajo real, pero sigue siendo vibe-code. Si eso te causa problemas, probablemente Chilpa no sea para ti.',
+      },
+      {
+        q: '¿Por qué hacer Chilpa?',
+        a: 'Podría empezar el discurso como todos: "No había una aplicación así y decidí hacer la mía". Lo cierto es que hoy el mercado de apps de música es muy amplio; cada semana aparecen nuevas, unas con una función, otras con otra. Chilpa existe porque cuando murió QBZ, mi TDAH se quedó sin hiperfoco, y no es bonito que a una persona con TDAH le quiten su hiperfoco de forma abrupta. Esa es la razón principal. La segunda, pero no menos importante: QBZ no solo evidenció que hay un vacío que llenar, también recolectó muchísimo feedback de la comunidad, que le dio vida y la hizo relevante. Ignorar esa retroalimentación, el know-how y los reportes de bugs sería casi un pecado. Las empresas pagan por la retroalimentación que QBZ recibió amablemente de cada usuario que la utilizó, y hay empresas (cof, cof) que deciden simplemente ignorar a su comunidad, la que paga. En el mundo open source hacemos las cosas distinto. Por eso existe Chilpa, y si tiene la mitad de los usuarios que tuvo QBZ, con eso ya será un éxito.',
+      },
+      {
+        q: 'Ya probé Chilpa, deberías comercializarla.',
+        a: 'No. Chilpa es y será siempre libre y de código abierto. Aunque haya sponsors o lo que sea, jamás tendrá un tier ni funciones premium. Un comentario, un donativo, un PR o un issue son igual de valiosos.',
+      },
+      {
+        q: 'El título de la página es muy pretencioso, ¿no crees?',
+        a: 'Ah, sí. No lo escribí con aires de grandeza, sino como una referencia: {quote}.',
+      },
+      {
+        q: '¿Habrá versión para Windows?',
+        a: 'Sí. Solo que no tengo una computadora con Windows de planta: monté una instalación temporal para QBZ, pero la borré y no la he vuelto a hacer. Vendrá, pero una vez que la versión inicial se estabilice un poco más.',
+      },
+      {
+        q: '¿Qué hay del demonio headless?',
+        a: 'Por supuesto. La idea es que Chilpa no dependa de los *-connect de los servicios de streaming. De nuevo: una sola opción, con estándares de uso, fácil de usar.',
+      },
+      {
+        q: '¿Habrá versión para móvil?',
+        a: 'Sí. Irá de la mano con la versión headless.',
+      },
+    ],
   },
   footer: {
     source: 'Código',
