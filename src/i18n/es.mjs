@@ -102,7 +102,6 @@ export default {
     discussions: 'Discussions',
     issues: 'Issues',
     source: 'Código',
-    successor: 'Chilpa es el sucesor espiritual de {qbz}.',
   },
   faq: {
     title: 'Preguntas frecuentes',
@@ -144,7 +143,6 @@ export default {
     releases: 'Releases',
     sdk: 'SDK',
     plugins: 'Plugins',
-    qbz: 'QBZ',
   },
   notFound: 'Esta página no existe.',
   captures: {

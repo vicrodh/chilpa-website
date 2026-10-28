@@ -300,8 +300,7 @@ function community(ctx) {
 <a class="btn" href="${site.links.discussions}">${icon('message-circle')}${t.community.discussions}</a>
 <a class="btn" href="${site.links.issues}">${icon('bug')}${t.community.issues}</a>
 <a class="btn" href="${site.links.source}">${icon('brand-github')}${t.community.source}</a>
-</div>
-<p class="small">${fill(t.community.successor, { qbz: html`<a href="${site.links.qbz}">QBZ</a>` })}</p>`,
+</div>`,
   )
 }
 
@@ -327,7 +326,6 @@ function footer(t) {
     [site.links.releases, t.footer.releases],
     [site.links.sdk, t.footer.sdk],
     [site.links.catalog, t.footer.plugins],
-    [site.links.qbz, t.footer.qbz],
   ]
   return html`<footer class="site-footer">
 <div class="container footer-row">

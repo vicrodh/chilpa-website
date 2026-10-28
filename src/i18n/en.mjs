@@ -102,7 +102,6 @@ export default {
     discussions: 'Discussions',
     issues: 'Issues',
     source: 'Source',
-    successor: 'Chilpa is the spiritual successor to {qbz}.',
   },
   faq: {
     title: 'FAQ',
@@ -144,7 +143,6 @@ export default {
     releases: 'Releases',
     sdk: 'SDK',
     plugins: 'Plugins',
-    qbz: 'QBZ',
   },
   notFound: 'This page does not exist.',
   captures: {
