@@ -29,6 +29,7 @@ export default {
     title: 'Contents',
     bitPerfect: 'Bit-perfect',
     library: 'Library',
+    devices: 'Device Sync',
     lyrics: 'Lyrics and immersive',
     plugins: 'Plugins and SDK',
     privacy: 'Privacy',
@@ -50,6 +51,11 @@ export default {
       'One query, three ways to edit it. In Columns, a click includes a value and − excludes it. The panel shows each condition as a readable row, with "all" or "any" groups. The console takes the same query as text. All three write the same query.',
     readAs:
       '"Read as" shows what the engine decided on its own, such as a name resolved to a composer or an alias, and you can remove it.',
+  },
+  devices: {
+    title: 'Device Sync',
+    body: "Sync your DAP, whether it's connected directly over USB or you plug in its microSD card. Quick and easy: no Android File Transfer hell on macOS, no MTP hell on Linux. Just connect and transfer, with memory and history.",
+    verify: 'You can also verify your transfers, so there are no more surprises with corrupted files halfway through a listening session. A nod to the past and the good old days of iTunes.',
   },
   lyrics: {
     title: 'Lyrics and immersive view',
@@ -162,6 +168,10 @@ export default {
     'library-refine': {
       name: 'Library with Refine open',
       alt: 'Library with Refine open: a condition on a library field and the albums that meet it',
+    },
+    devices: {
+      name: 'Device Sync',
+      alt: 'Device Sync page with a saved FiiO M21 microSD profile, the Music, Synced music and Changes tabs, and a list of playlists selected to sync',
     },
     immersive: {
       name: 'Immersive view',

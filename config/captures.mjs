@@ -16,6 +16,7 @@ export const captures = {
   'hifi-wizard': { shape: 'half' },
   'artist-page': { shape: 'wide' },
   'library-refine': { shape: 'wide' },
+  devices: { shape: 'wide' },
   immersive: { shape: 'half' },
   'settings-privacy': { shape: 'strip' },
 }

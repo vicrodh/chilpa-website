@@ -122,10 +122,11 @@ ${release ? html`<p class="hero-meta"><a href="${release.url}">${release.tag}</a
 </section>`
 }
 
-const sections = ['bit-perfect', 'library', 'lyrics', 'plugins', 'privacy', 'platforms', 'community', 'faq']
+const sections = ['bit-perfect', 'library', 'devices', 'lyrics', 'plugins', 'privacy', 'platforms', 'community', 'faq']
 const tocKeys = {
   'bit-perfect': 'bitPerfect',
   library: 'library',
+  devices: 'devices',
   lyrics: 'lyrics',
   plugins: 'plugins',
   privacy: 'privacy',
@@ -186,6 +187,17 @@ ${capture(ctx, 'artist-page')}
 <p class="small">${t.library.readAs}</p>
 ${capture(ctx, 'library-refine')}
 </div>`,
+  )
+}
+
+function devices(ctx) {
+  const { t } = ctx
+  return section(
+    'devices',
+    t.devices.title,
+    html`<p>${t.devices.body}</p>
+${capture(ctx, 'devices')}
+<p class="small">${t.devices.verify}</p>`,
   )
 }
 
@@ -350,6 +362,7 @@ ${toc(t)}
 <div class="sections">
 ${bitPerfect(ctx)}
 ${library(ctx)}
+${devices(ctx)}
 ${lyrics(ctx)}
 ${plugins(ctx)}
 ${privacy(ctx)}

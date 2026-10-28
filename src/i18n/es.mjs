@@ -29,6 +29,7 @@ export default {
     title: 'Índice',
     bitPerfect: 'Bit-perfect',
     library: 'Biblioteca',
+    devices: 'Device Sync',
     lyrics: 'Letras e inmersiva',
     plugins: 'Plugins y SDK',
     privacy: 'Privacidad',
@@ -50,6 +51,11 @@ export default {
       'Una consulta, tres formas de editarla. En Columnas, un clic incluye un valor y − lo excluye. El panel muestra cada condición como una fila legible, con grupos de "todas" o "cualquiera". La consola acepta la misma consulta como texto. Las tres escriben la misma consulta.',
     readAs:
       '"Leído como" muestra lo que el motor decidió por su cuenta, como un nombre resuelto a compositor o un alias, y puedes quitarlo.',
+  },
+  devices: {
+    title: 'Device Sync',
+    body: 'Sincroniza tu DAP, ya sea con el dispositivo conectado directo por USB o conectando su microSD. Fácil y rápido, sin el infierno de Android File Transfer en macOS ni el infierno del MTP en Linux: solo conectas y transfieres, con memoria e historial.',
+    verify: 'También puedes verificar tus transferencias, para que no haya más sorpresas de archivos corruptos a media sesión de escucha. Un guiño al pasado y a los buenos tiempos de iTunes.',
   },
   lyrics: {
     title: 'Letras y vista inmersiva',
@@ -162,6 +168,10 @@ export default {
     'library-refine': {
       name: 'Biblioteca con Refine abierto',
       alt: 'Biblioteca con Refine abierto: una condición sobre un campo de la biblioteca y los discos que la cumplen',
+    },
+    devices: {
+      name: 'Device Sync',
+      alt: 'Página de Device Sync con un perfil guardado de microSD de un FiiO M21, las pestañas Music, Synced music y Changes, y una lista de playlists seleccionadas para sincronizar',
     },
     immersive: {
       name: 'Vista inmersiva',
