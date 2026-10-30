@@ -324,7 +324,11 @@ function community(ctx) {
 
 function faq(ctx) {
   const { t } = ctx
-  const quote = html`<i>${t.faq.ringQuote}</i>`
+  const slots = {
+    quote: html`<i>${t.faq.ringQuote}</i>`,
+    qbz: html`<a href="${site.links.qbz}">QBZ</a>`,
+    yes: html`<strong><u>${t.faq.yes}</u></strong>`,
+  }
   return section(
     'faq',
     t.faq.title,
@@ -332,7 +336,7 @@ function faq(ctx) {
 <div class="faq">
 ${t.faq.items.map((item) => html`<div class="faq-item">
 <h3>${item.q}</h3>
-<p>${fill(item.a, { quote })}</p>
+${[item.a].flat().map((paragraph) => html`<p>${fill(paragraph, slots)}</p>`)}
 </div>`)}
 </div>`,
   )

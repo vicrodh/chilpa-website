@@ -109,11 +109,17 @@ export default {
   faq: {
     title: 'Preguntas frecuentes',
     note: 'Aviso: esta sección está llena de referencias a QBZ.',
+    yes: "Sí, lo es",
     ringQuote: 'Ash Nazg durbatulûk, ash Nazg gimbatul, ash Nazg thrakatulûk agh burzum-ishi krimpatul',
     items: [
       {
         q: '¿Chilpa es una aplicación vibe-codeada?',
-        a: 'Sí. Cuando empecé QBZ era para mí: lo hice porque no había un cliente de Qobuz para Linux, y aunque admiro mucho a Strawberry (Chilpa toma varias de sus funciones como inspiración), tengo una relación de amor/odio con él, así que ni quería usar el reproductor web ni quería pelear con el buscador de Strawberry. Primero hice un cliente pequeño de CLI basado en los downloaders de Python, luego lo convertí en una API, después caí en el hype de Rust —para bien— y decidí migrar el proyecto a ese lenguaje, todo a mano, como POC, como hobby. Cuando los LLMs llegaron al mainstream, desempolvé el proyecto y entonces vio la luz: durante sus 9 meses de vida se convirtió en el reproductor de streaming open source de referencia. Su core era código escrito a mano; su evolución fue vibe-codeada. Chilpa, en cambio, está 99% vibe-codeada: ya tenía toda la lógica, los ADR y, sobre todo, el feedback de la comunidad. Solo he escrito no más de 200 líneas de código de Chilpa y varias pruebas unitarias; siendo optimista, es el 1% del código, y eso redondeando hacia arriba. Así que sí, Chilpa es una app vibe-codeada. Está hecha con responsabilidad, con buenas prácticas, ADR, SOLID y los workflows que uso en mi trabajo real, pero sigue siendo vibe-code. Si eso te causa problemas, probablemente Chilpa no sea para ti.',
+        a: [
+          "{yes}. Cuando empecé {qbz} era para mí: lo hice porque no había un cliente de Qobuz para Linux, y aunque admiro mucho a Strawberry (Chilpa toma varias de sus funciones como inspiración), tengo una relación de amor/odio con él, así que ni quería usar el reproductor web ni quería pelear con el buscador de Strawberry. Primero hice un cliente pequeño de CLI basado en los downloaders de Python, luego lo convertí en una API, después caí en el hype de Rust —para bien— y decidí migrar el proyecto a ese lenguaje, todo a mano, como POC, como hobby. Cuando los LLMs llegaron al mainstream, desempolvé el proyecto y entonces vio la luz: durante sus 9 meses de vida se convirtió en el reproductor de streaming open source de referencia. Su core era código escrito a mano; su evolución fue vibe-codeada.",
+          "Chilpa, en cambio, está 99% vibe-codeada: ya tenía toda la lógica, los ADR y, sobre todo, el feedback de la comunidad. Solo he escrito no más de 200 líneas de código de Chilpa y varias pruebas unitarias; siendo optimista, es el 1% del código, y eso redondeando hacia arriba. Así que sí, Chilpa es una app vibe-codeada. Está hecha con responsabilidad, con buenas prácticas, ADR, SOLID y los workflows que uso en mi trabajo real.",
+          "No es un proyecto de fin de semana. Pude haberles dado el código de QBZ a los agentes y tener todo listo en un par de días, pero el primer release tomó no menos de un mes, porque todo está escrito de forma modular y cada módulo se revisó con pruebas unitarias, con Sonar y por un humano antes de integrarse a la app. Aun así, por transparencia tengo que decirlo: sigue siendo vibe-code.",
+          "Si eso te causa problemas, probablemente Chilpa no sea para ti.",
+        ],
       },
       {
         q: '¿Por qué hacer Chilpa?',
