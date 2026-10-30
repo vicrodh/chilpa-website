@@ -16,6 +16,8 @@ export const site = {
     catalog: 'https://github.com/vicrodh/chilpa-plugins',
     qbz: 'https://github.com/vicrodh/qbz',
   },
+  // The one-line installer; chilpa.app/install.sh redirects to the latest release's script.
+  installCommand: "curl -fsSL --proto '=https' https://chilpa.app/install.sh | bash",
   plugins: [
     { id: 'radio', repo: 'chilpa-pg-radio', icon: 'radio' },
     { id: 'podcasts', repo: 'chilpa-pg-podcasts', icon: 'microphone-2' },

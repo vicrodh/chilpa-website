@@ -23,7 +23,8 @@ export default {
     lead: 'Reproductor de música y gestor de biblioteca de código abierto. Lo local primero. Bit-perfect. Hecho para escalar.',
     fromCreator: 'Del creador de {qbz}',
     downloadFor: 'Descargar para {platform}',
-    allPlatforms: 'Todas las plataformas',
+    allDownloads: 'Ver todas las descargas',
+    installLabel: 'O instala desde la terminal en Linux y macOS',
   },
   toc: {
     title: 'Índice',
@@ -87,6 +88,8 @@ export default {
     download: 'Descargar',
     downloadArch: 'Descargar {format} para {arch}',
     stores: 'Repositorios y tiendas',
+    quarantineTitle: 'Si macOS no deja abrir Chilpa, quita la marca de cuarentena una sola vez:',
+    quarantine: { installer: 'Instalaste con el script', manual: 'Instalaste desde el DMG o el ZIP' },
     copy: 'Copiar',
     copied: 'Copiado',
     unavailable: 'Los paquetes están en la página de releases en GitHub.',

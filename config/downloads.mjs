@@ -24,6 +24,11 @@ export const platforms = [
     defaultArch: 'arm64',
     // Used while every macOS asset of the release is arm64.
     labelArm64Only: 'macOS (Apple Silicon)',
+    // Commands that clear the quarantine flag, by how the app got there.
+    quarantine: [
+      { id: 'installer', command: 'xattr -dr com.apple.quarantine ~/Applications/Chilpa.app' },
+      { id: 'manual', command: 'xattr -dr com.apple.quarantine /Applications/Chilpa.app' },
+    ],
     notice: {
       es: 'Sin notarizar por Apple: la primera vez, macOS bloquea la apertura. Ve a Ajustes del Sistema › Privacidad y seguridad y elige "Abrir de todos modos".',
       en: 'Not notarized by Apple: macOS blocks the first launch. Go to System Settings › Privacy & Security and choose "Open Anyway".',

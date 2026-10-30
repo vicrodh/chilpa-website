@@ -99,6 +99,7 @@ export function buildDownloads(releases) {
         icon: platform.icon,
         label: armOnly && platform.labelArm64Only ? platform.labelArm64Only : platform.label,
         notice: platform.notice ?? null,
+        quarantine: platform.quarantine ?? [],
         archs,
         formats: groups,
         stores: platformStores.map((store) => ({ ...store, recommended: Boolean(store.recommended) })),

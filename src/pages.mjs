@@ -90,6 +90,11 @@ function capture(ctx, id, { eager = false } = {}) {
   return html`${image(files.light, 'theme-light')}${image(files.dark, 'theme-dark')}`
 }
 
+// A command in a code block with its copy button.
+function commandRow({ t }, { command, className }) {
+  return html`<div class="${className}"><pre class="store-command"><code>${command}</code></pre><button type="button" class="icon-button js-only" data-copy="${command}" data-label-copied="${t.platforms.copied}" aria-label="${t.platforms.copy}" title="${t.platforms.copy}">${icon('copy', 'when-idle')}${icon('check', 'when-copied')}</button></div>`
+}
+
 function heroActions(ctx) {
   const { t, downloads } = ctx
   const entries = downloads.platforms.length
@@ -115,9 +120,12 @@ function hero(ctx) {
 <p class="byline">${fill(t.hero.fromCreator, { qbz: html`<a href="${site.links.qbz}">QBZ</a>` })}</p>
 <div class="hero-actions" data-hero>
 ${heroActions(ctx)}
-<a class="text-link" href="#platforms">${t.hero.allPlatforms}</a>
 </div>
-${release ? html`<p class="hero-meta"><a href="${release.url}">${release.tag}</a> · <time datetime="${release.date}">${release.date}</time></p>` : ''}
+<div class="hero-install">
+<p class="hero-install-label">${t.hero.installLabel}</p>
+${commandRow(ctx, { command: site.installCommand, className: 'install-line' })}
+</div>
+<p class="hero-meta">${release ? html`<a href="${release.url}">${release.tag}</a> · <time datetime="${release.date}">${release.date}</time> · ` : ''}<a class="text-link" href="#platforms">${t.hero.allDownloads}</a></p>
 <div class="hero-capture">${capture(ctx, 'main-window', { eager: true })}</div>
 </section>`
 }
@@ -244,6 +252,15 @@ ${platform.stores.map((store) => html`<li class="store">${icon(store.icon)}<span
 </ul>`
 }
 
+function quarantineList(ctx, platform) {
+  const { t } = ctx
+  if (platform.quarantine.length === 0) return ''
+  return html`<p class="stores-title">${t.platforms.quarantineTitle}</p>
+<ul class="stores">
+${platform.quarantine.map((entry) => html`<li class="store">${icon('terminal-2')}<span class="store-name">${t.platforms.quarantine[entry.id]}</span><pre class="store-command"><code>${entry.command}</code></pre><button type="button" class="icon-button js-only" data-copy="${entry.command}" data-label-copied="${t.platforms.copied}" aria-label="${t.platforms.copy}" title="${t.platforms.copy}">${icon('copy', 'when-idle')}${icon('check', 'when-copied')}</button></li>`)}
+</ul>`
+}
+
 function platformBlock(ctx, platform) {
   const { t, lang, downloads } = ctx
   const release = downloads.release
@@ -259,6 +276,7 @@ ${format.recommended ? html`<span class="chip chip-small">${t.platforms.recommen
 </ul>
 ${storeList(ctx, platform)}
 ${platform.notice ? html`<p class="notice">${platform.notice[lang]}</p>` : ''}
+${quarantineList(ctx, platform)}
 </div>`
 }
 

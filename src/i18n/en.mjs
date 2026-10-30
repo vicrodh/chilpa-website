@@ -23,7 +23,8 @@ export default {
     lead: 'Open-source music player & library manager. Local-first. Bit-perfect. Built to scale.',
     fromCreator: 'From the creator of {qbz}',
     downloadFor: 'Download for {platform}',
-    allPlatforms: 'All platforms',
+    allDownloads: 'View all downloads',
+    installLabel: 'Or install from the terminal on Linux and macOS',
   },
   toc: {
     title: 'Contents',
@@ -87,6 +88,8 @@ export default {
     download: 'Download',
     downloadArch: 'Download {format} for {arch}',
     stores: 'Repositories and stores',
+    quarantineTitle: 'If macOS refuses to open Chilpa, remove the quarantine flag once:',
+    quarantine: { installer: 'Installed with the script', manual: 'Installed from the DMG or ZIP' },
     copy: 'Copy',
     copied: 'Copied',
     unavailable: 'The packages are on the releases page on GitHub.',

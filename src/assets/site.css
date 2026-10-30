@@ -365,6 +365,30 @@ img {
   gap: 12px;
 }
 
+.hero-install {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 42em;
+}
+
+.hero-install-label {
+  margin: 0;
+  color: var(--mut2);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.install-line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 14px;
+  border: 1px solid var(--line2);
+  border-radius: 4px;
+}
+
 .hero-meta {
   margin: -6px 0 0;
   color: var(--mut2);
