@@ -46,6 +46,8 @@ ${ogAlternates.map((locale) => html`<meta property="og:locale:alternate" content
 <script>${raw(themeScript)}</script>
 ${extraScripts.map((source) => html`<script>${raw(source)}</script>`)}
 ${lang ? html`<script src="${href(assets.js)}" defer></script>` : ''}
+<script defer src="${site.analytics.umami.script}" data-website-id="${site.analytics.umami.websiteId}"></script>
+<script data-goatcounter="${site.analytics.goatcounter.endpoint}" async src="${site.analytics.goatcounter.script}"></script>
 </head>`
 }
 

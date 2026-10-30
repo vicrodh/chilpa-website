@@ -44,13 +44,14 @@ const digest = (content, encoding = 'hex') => createHash('sha256').update(conten
 const scriptHash = (source) => `'sha256-${digest(source, 'base64')}'`
 
 function contentSecurityPolicy(inlineScripts) {
+  const { umami, goatcounter } = site.analytics
   return [
     "default-src 'none'",
-    `script-src 'self' ${inlineScripts.map(scriptHash).join(' ')}`,
+    `script-src 'self' ${inlineScripts.map(scriptHash).join(' ')} ${new URL(umami.script).origin} ${goatcounter.scriptOrigin}`,
     "style-src 'self'",
-    "img-src 'self'",
+    `img-src 'self' ${goatcounter.origin}`,
     "font-src 'self'",
-    "connect-src 'none'",
+    `connect-src ${[...umami.connect, goatcounter.origin].join(' ')}`,
     "base-uri 'none'",
     "form-action 'none'",
   ].join('; ')

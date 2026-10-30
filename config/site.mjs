@@ -18,6 +18,12 @@ export const site = {
   },
   // The one-line installer; chilpa.app/install.sh redirects to the latest release's script.
   installCommand: "curl -fsSL --proto '=https' https://chilpa.app/install.sh | bash",
+  // Page analytics: Umami Cloud and GoatCounter. The hosts are also what the
+  // Content-Security-Policy lets the page load from and report to.
+  analytics: {
+    umami: { script: 'https://cloud.umami.is/script.js', websiteId: 'ba484f73-eff7-435a-b162-2248a2d07c3d', connect: ['https://api-gateway.umami.dev', 'https://cloud.umami.is'] },
+    goatcounter: { endpoint: 'https://blitzfc.goatcounter.com/count', script: '//gc.zgo.at/count.js', scriptOrigin: 'https://gc.zgo.at', origin: 'https://blitzfc.goatcounter.com' },
+  },
   plugins: [
     { id: 'radio', repo: 'chilpa-pg-radio', icon: 'radio' },
     { id: 'podcasts', repo: 'chilpa-pg-podcasts', icon: 'microphone-2' },
