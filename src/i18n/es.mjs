@@ -14,6 +14,7 @@ export default {
     downloads: 'Descargas',
     community: 'Comunidad',
     github: 'Código en GitHub',
+    reddit: 'Chilpa en Reddit (r/Chilpa)',
     toDark: 'Modo oscuro',
     toLight: 'Modo claro',
     language: 'Idioma',
@@ -103,6 +104,7 @@ export default {
   community: {
     title: 'Comunidad',
     discussions: 'Discussions',
+    reddit: 'Reddit',
     issues: 'Issues',
     source: 'Código',
   },

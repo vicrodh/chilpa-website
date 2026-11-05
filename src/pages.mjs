@@ -68,6 +68,7 @@ function header(t) {
 </nav>
 <div class="header-tools">
 <a class="icon-link" href="${site.links.source}" aria-label="${t.nav.github}" title="${t.nav.github}">${icon('brand-github')}</a>
+<a class="icon-link" href="${site.links.reddit}" aria-label="${t.nav.reddit}" title="${t.nav.reddit}">${icon('brand-reddit')}</a>
 <button type="button" class="icon-button js-only" data-theme-toggle data-label-dark="${t.nav.toDark}" data-label-light="${t.nav.toLight}" aria-label="${t.nav.toDark}" title="${t.nav.toDark}">${icon('moon', 'when-light')}${icon('sun', 'when-dark')}</button>
 <div class="lang-switch" role="group" aria-label="${t.nav.language}">
 ${site.languages.map((code) => html`<a href="${href(`${code}/`)}" hreflang="${code}" lang="${code}" data-lang-switch="${code}"${current(code)}>${code.toUpperCase()}</a>`)}
@@ -318,6 +319,7 @@ function community(ctx) {
     t.community.title,
     html`<div class="button-row">
 <a class="btn" href="${site.links.discussions}">${icon('message-circle')}${t.community.discussions}</a>
+<a class="btn" href="${site.links.reddit}">${icon('brand-reddit')}${t.community.reddit}</a>
 <a class="btn" href="${site.links.issues}">${icon('bug')}${t.community.issues}</a>
 <a class="btn" href="${site.links.source}">${icon('brand-github')}${t.community.source}</a>
 </div>`,

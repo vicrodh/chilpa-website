@@ -12,6 +12,7 @@ export const site = {
     latestRelease: 'https://github.com/vicrodh/chilpa/releases/latest',
     discussions: 'https://github.com/vicrodh/chilpa/discussions',
     issues: 'https://github.com/vicrodh/chilpa/issues',
+    reddit: 'https://www.reddit.com/r/Chilpa/',
     sdk: 'https://github.com/vicrodh/chilpa-plugins-sdk',
     catalog: 'https://github.com/vicrodh/chilpa-plugins',
     qbz: 'https://github.com/vicrodh/qbz',
